@@ -23,8 +23,8 @@ int main() {
 		cout << endl;
 
 		if (selection == 1) {
-			int height_feet;
-			int height_inches;
+			float height_feet;
+			float height_inches;
 			float weight;
 			cout << "You have chosen to Calculate BMI" << endl
 				<< "Please enter height in feet, inches will be next: ";
@@ -35,7 +35,7 @@ int main() {
 			cin >> weight;
 
 			height_inches += height_feet * 12;
-			float BMI = float(weight * 0.45) / float((height_inches * .025) * (height_inches * .025));
+			float BMI = float(weight * 0.45) / ((height_inches*.025) * ((height_feet*12) * .025));
 
 			cout << endl << endl << "Calculated BMI: ";
 			if (BMI < 18.5) {
@@ -52,7 +52,6 @@ int main() {
 			}
 		}
 		else if (selection == 2) {
-			cout << "make retirment calculator" << endl;
 			int age;
 			int salary;
 			float percent_saved;
